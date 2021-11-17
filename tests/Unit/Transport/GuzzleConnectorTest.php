@@ -62,7 +62,7 @@ class GuzzleConnectorTest extends TestCase
     /**
      * Set up the test fixtures.
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -122,7 +122,7 @@ class GuzzleConnectorTest extends TestCase
             ->with($this->request)
             ->will($this->throwException($exception));
 
-        $this->setExpectedException(
+        $this->expectException(
             'RuntimeException',
             'Something went terribly wrong'
         );
@@ -148,7 +148,7 @@ class GuzzleConnectorTest extends TestCase
             ->with($this->request)
             ->will($this->throwException($exception));
 
-        $this->setExpectedException(
+        $this->expectException(
             'RuntimeException',
             'Something went terribly wrong'
         );
@@ -175,7 +175,7 @@ class GuzzleConnectorTest extends TestCase
             ->with($this->request)
             ->will($this->throwException($exception));
 
-        $this->setExpectedException(
+        $this->expectException(
             'RuntimeException',
             'Something went terribly wrong'
         );
@@ -201,7 +201,7 @@ class GuzzleConnectorTest extends TestCase
             ->with($this->request)
             ->will($this->throwException($exception));
 
-        $this->setExpectedException(
+        $this->expectException(
             'RuntimeException',
             'Something went terribly wrong'
         );
@@ -236,7 +236,7 @@ class GuzzleConnectorTest extends TestCase
             ->with($this->request)
             ->will($this->throwException($exception));
 
-        $this->setExpectedException(
+        $this->expectException(
             'RuntimeException',
             'Something went terribly wrong'
         );

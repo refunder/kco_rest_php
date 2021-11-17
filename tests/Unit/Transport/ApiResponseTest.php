@@ -24,7 +24,7 @@ use Klarna\Rest\Transport\ApiResponse;
 /**
  * Unit test cases for the UserAgent class.
  */
-class ApiResponseTest extends \PHPUnit_Framework_TestCase
+class ApiResponseTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Make sure the default user agent components are present.

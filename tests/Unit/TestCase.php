@@ -25,7 +25,7 @@ use Klarna\Rest\Transport\ApiResponse;
 /**
  * Base unit test case class.
  */
-class TestCase extends \PHPUnit_Framework_TestCase
+class TestCase extends \PHPUnit\Framework\TestCase
 {
     /**
      */
@@ -41,7 +41,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
     /**
      * Sets up the test fixtures.
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->response = $this->getMockBuilder(ApiResponse::class)
             ->getMock();

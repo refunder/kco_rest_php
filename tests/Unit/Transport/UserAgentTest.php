@@ -24,7 +24,7 @@ use Klarna\Rest\Transport\UserAgent;
 /**
  * Unit test cases for the UserAgent class.
  */
-class UserAgentTest extends \PHPUnit_Framework_TestCase
+class UserAgentTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var UserAgent
@@ -34,7 +34,7 @@ class UserAgentTest extends \PHPUnit_Framework_TestCase
     /**
      * Set up the test fixtures
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->agent = new UserAgent();
     }
