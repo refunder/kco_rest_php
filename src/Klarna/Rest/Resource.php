@@ -21,8 +21,8 @@ namespace Klarna\Rest;
 
 use GuzzleHttp\Exception\RequestException;
 use Klarna\Rest\Transport\ConnectorInterface;
-use Klarna\Rest\Transport\Method;
 use Klarna\Rest\Transport\Exception\ConnectorException;
+use Klarna\Rest\Transport\Method;
 use Klarna\Rest\Transport\ResponseValidator;
 
 /**
@@ -103,10 +103,10 @@ abstract class Resource extends \ArrayObject
     /**
      * Overrides: Stores the ID KEY field in order to restore it after exchanging the array without
      * the ID field.
-     * 
+     *
      * @param array $array Data to be exchanged
      */
-    public function exchangeArray($array)
+    public function exchangeArray($array) : array
     {
         $id = $this->getId();
 
@@ -116,6 +116,8 @@ abstract class Resource extends \ArrayObject
         if (is_null($this->getId()) && !is_null($id)) {
             $this->setId($id);
         }
+
+        return $array;
     }
 
     /**
@@ -222,7 +224,7 @@ DEBUG_BODY;
         if (!empty($location)) {
             $this->setLocation($location);
         }
-        
+
         return new ResponseValidator($response);
     }
 
